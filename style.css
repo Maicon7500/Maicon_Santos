@@ -156,7 +156,8 @@ nav ul a svg {
     padding: 0 100px;
 }
 
-.services-container{
+/* 14.14 07:32 */
+.services-container, .portfolio-container{ 
     display: flex;
     justify-content: space-between;
     max-width: 1200px;
@@ -186,6 +187,19 @@ nav ul a svg {
 .service-card + .service-card {
     margin-left: 10px;
 }
+
+.portfolio {
+    padding: 0 100px;
+    text-align: center;
+}
+
+.portfolio .portfolio-container {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
 /* RESPONSIVIODADE */
 
 /* small desktops */
@@ -234,6 +248,7 @@ nav ul a svg {
        .service-card + .service-card {
         margin-left: 0px;
         margin-top: 30px;
+       }
 }
 
 /* tablet */
