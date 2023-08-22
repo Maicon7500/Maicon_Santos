@@ -191,10 +191,14 @@ nav ul a svg {
 .portfolio {
     padding: 0 100px;
     margin-bottom: 100px;
+    height: 800px;
     text-align: center;
     background: url(assets/porfolio-bg.png);
 }
 
+.portfolio .portfolio-container {
+    margin-top: 130px;
+}
 
 .portfolio .portfolio-container .portfolio-card {
     background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.33) 0%, rgba(255, 255, 255, 0) 100%);
@@ -209,11 +213,27 @@ nav ul a svg {
 }
 
 .portfolio .portfolio-container .portfolio-card .img-container {
-    margin: 0px 25px 50px;
+    margin: 0 25px 50px;
+    position: relative;
 }
 
 .portfolio .portfolio-container .portfolio-card .img-container img {
     width: 100%;
+}
+
+.portfolio-container .portfolio-card .img-container .line {
+    
+        width: calc(100% + 24px);
+        height: calc(100% + 24px);
+        border: 1px solid var(--green);
+        border-radius: 16px;
+        transform: rotate(-1.93deg);
+        
+        
+        position: absolute;
+        top: -12px;
+        left: calc(50% - 100%/2 - 12px);
+    
 }
 
 .portfolio .portfolio-container .portfolio-card .language-container {
@@ -254,7 +274,7 @@ p {
        }
     
     nav ul a {
-        font-size: 10px;
+        font-size: 18px;
     }
 
     nav {
@@ -270,17 +290,18 @@ p {
        }
        
        .about-me .container {
-        padding: 0;
+        padding-right: 0;
        }
 
        .about-me .img-container {
         margin: 70px 0;
        }
 
-       .services {
+       .services, .portfolio {
          padding: 0;
        }
-       .services .services-container {
+       
+       .services .services-container, .portfolio .portfolio-container {
         flex-wrap: wrap;
         flex-direction: column;
         align-items: center;
@@ -290,9 +311,13 @@ p {
         height: 394px;
        }
 
-       .service-card + .service-card {
-        margin-left: 0px;
+       .service-card + .service-card, .portfolio-card + .portfolio-card {
+        margin-left: 0;
         margin-top: 30px;
+       }
+
+       .portfolio {
+            height: 100%;
        }
 }
 
@@ -320,6 +345,9 @@ p {
 /* celular */
 
 @media (max-width:480px){
+   body {
+       margin-bottom: calc(var(--menu-height) + 50px);
+   }
    header .container {
     padding: 0 40px;
    }
@@ -350,8 +378,16 @@ p {
 
    }
 
-   .services .services-container {
+   .services .services-container, .portfolio-container {
     padding: 0 20px;
+   }
+
+   .portfolio .portfolio-container {
+        margin-top: 70px;
+   }
+
+   .portfolio {
+        margin: 100px 0 50px;
    }
 }
 
